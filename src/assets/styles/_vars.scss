@@ -1,0 +1,29 @@
+$c-main: #bd87a7;
+
+$c-text: #fff;
+$c-text-alt: #9f9f9f;
+
+$c-btn: #b6cd68;
+
+$f-main: "Neutra-Regular";
+$f-title: "Neutra-Titling";
+$f-strong: "Neutra-Bold";
+
+$f-text: "Univers-Light";
+$f-text-b: "Univers-Bold";
+
+// extra small
+$xs: 400px;
+// small
+$sm: 768px;
+// medium
+$md: 992px;
+// large
+$lg: 1280px;
+// extra large
+$xlg: 1920px;
+
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+}

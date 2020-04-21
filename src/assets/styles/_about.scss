@@ -1,0 +1,48 @@
+.about {
+  &__img {
+    display: block;
+    width: 100%;
+    height: 375px;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  &__content {
+    padding: 0 30px;
+  }
+  &__text {
+    padding-bottom: 20px;
+    font-size: 19px;
+    color: $c-text-alt;
+  }
+  @media (min-width: $sm) {
+    padding: 0 94px;
+    @include flexCenter();
+    justify-content: center;
+    &__img {
+      width: 233px;
+      height: 484px;
+      box-shadow: 0 0 59px 0 #0a0a0a;
+    }
+    &__content {
+      padding: 0;
+      margin-left: 64px;
+      flex: 0 254px;
+    }
+  }
+  @media (min-width: $lg) {
+    padding: 0;
+
+    &__img {
+      width: 297px;
+      height: 452px;
+      max-height: none;
+    }
+    &__content {
+      margin-left: 78px;
+      flex: 0 624px;
+    }
+    &__text {
+      font-size: 23px;
+    }
+  }
+}

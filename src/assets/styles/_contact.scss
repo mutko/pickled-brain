@@ -1,0 +1,100 @@
+.contact {
+  &__img {
+    display: block;
+    width: 100%;
+    height: 375px;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  &__content {
+    padding: 0 30px;
+  }
+  &__text {
+    padding-bottom: 40px;
+    font-size: 26px;
+    &--address {
+      font-weight: bold;
+      text-decoration: underline;
+      color: $c-text;
+    }
+  }
+
+  @media (min-width: $sm) {
+    @include flexCenter();
+    flex-wrap: wrap;
+
+    &__img {
+      box-shadow: 0 0 59px 0 #0a0a0a;
+      flex: 1 1 100%;
+    }
+    &__content {
+      flex: 1 1 45%;
+    }
+  }
+
+  @media (min-width: $lg) {
+    flex-wrap: nowrap;
+    max-width: 1225px;
+    margin: 0 auto;
+    picture {
+      order: 2;
+      flex: 1;
+    }
+    &__content {
+      flex: 1;
+      order: 1;
+      justify-content: flex-end;
+
+      padding: 0;
+      margin-right: -200px;
+      text-align: right;
+      z-index: 10;
+    }
+  }
+  @media (min-width: $xlg) {
+    picture {
+      flex: 0 0 687px;
+    }
+    &__img {
+      height: auto;
+      max-height: none;
+    }
+    &__content {
+      margin-right: -80px;
+    }
+  }
+}
+.contact-form {
+  padding: 0 30px;
+
+  &__input {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 24px 15px 24px 30px;
+    font-size: 22px;
+    font-family: $f-main;
+    background-color: #000;
+    color: $c-text;
+    border: none;
+    outline: none;
+    &::placeholder {
+      color: $c-text-alt;
+      opacity: 1; /* Firefox */
+    }
+  }
+
+  @media (min-width: $sm) {
+    flex: 1 1 55%;
+  }
+  @media (min-width: $lg) {
+    flex: 1;
+    order: 3;
+    padding: 0;
+    margin-left: -100px;
+  }
+  @media (min-width: $xlg) {
+    flex: 0 0 389px;
+    padding: 0;
+    margin-left: -135px;
+  }
+}
